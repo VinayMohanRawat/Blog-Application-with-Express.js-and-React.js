@@ -1,0 +1,9 @@
+section {
+    max-width: 50rem;
+    margin: 2rem auto;
+}
+
+.comment{
+    display: flex;
+    margin-top: 10px;
+}

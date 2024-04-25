@@ -1,0 +1,21 @@
+.blog {
+    max-width: 50rem;
+    margin: 2rem auto;
+    text-align: center;
+  }
+  
+  .blog img {
+    width: 30rem;
+    border-radius: 4px;
+    margin-bottom:10px;
+  }
+  
+  .actions {
+    margin: 10px;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  

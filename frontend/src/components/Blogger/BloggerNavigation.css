@@ -1,0 +1,9 @@
+.blog_nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    gap: 40px;
+}
+
+

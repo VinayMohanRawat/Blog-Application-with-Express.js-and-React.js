@@ -1,0 +1,9 @@
+.blogger-blogs-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding-right: 2rem;
+    margin-top: 2rem;
+
+}
