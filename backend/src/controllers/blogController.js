@@ -12,7 +12,6 @@ const createBlog = async (req, res) => {
         let { title, content } = validation;
 
         let files = req.files;
-        console.log(files)
 
         let uploadedFileUrl = '';
 
@@ -35,9 +34,6 @@ const createBlog = async (req, res) => {
                 adminId: adminId
             }
         })
-
-        console.log('data', data)
-
 
         return res.status(201).send({ status: true, message: 'Blog created successfully!', accountId: data.id })
 

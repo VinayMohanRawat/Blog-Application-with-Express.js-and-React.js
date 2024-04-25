@@ -30,8 +30,8 @@ model Blog {
   id Int @id @unique
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
-  title String  @db.VarChar(30)
-  content String @db.VarChar(255)
+  title String  @db.VarChar(100)
+  content String @db.VarChar(1500)
   image String?
   isPublished  Int @default(0)
   isDeleted Int @default(0)
