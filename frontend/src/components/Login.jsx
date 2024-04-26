@@ -13,11 +13,11 @@ export const Login = () => {
       <h2>Login</h2>
       <div className="form-group">
         <label htmlFor="email">Email address</label>
-        <input type="email" className="form-control" id="email" name='email' />
+        <input type="email" className="form-control" id="email" name='email' required />
       </div>
       <div className="form-group">
         <label htmlFor="password">Password</label>
-        <input type="password" className="form-control" id="password" name='password' />
+        <input type="password" className="form-control" id="password" name='password' required />
       </div>
       <div className="form-group form-check">
         <input type="checkbox" className="form-check-input" id="checkbox" name='checkbox' />

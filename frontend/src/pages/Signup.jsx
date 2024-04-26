@@ -2,6 +2,7 @@ import React from 'react'
 import { json, redirect } from 'react-router-dom';
 import { Signup } from '../components/Signup';
 
+
 export const SignupPage = () => {
     return (
         <Signup />
@@ -43,6 +44,6 @@ export async function action({ request }) {
         throw json({ message: resData.message }, { status: 500 })
     }
 
-    return redirect('/')
+    return redirect('/success')
 
 }

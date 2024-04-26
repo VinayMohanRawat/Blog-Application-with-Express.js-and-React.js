@@ -1,17 +1,17 @@
 import React from 'react'
 import '../Blogger/BloggerNavigation.css';
-import { NavLink, useRouteLoaderData } from 'react-router-dom'
+import { Link, useRouteLoaderData } from 'react-router-dom'
 
 export const ReaderNavigation = () => {
-    const { token, role } = useRouteLoaderData('root')
+    const { token, } = useRouteLoaderData('root')
 
     return (
         <>
             {token && <ul className='blog_nav'>
                 <li>
-                    <NavLink to='reader' >
+                    <Link to='/reader' >
                         <button type="button" className="btn btn-secondary px-5" aria-pressed="true">All blogger's blogs</button>
-                    </NavLink>
+                    </Link>
                 </li>
             </ul>}
         </>

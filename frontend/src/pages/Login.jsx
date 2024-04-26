@@ -60,6 +60,12 @@ export async function action({ request }) {
     expiration.setHours(expiration.getHours() + 24)
     localStorage.setItem('expiration', expiration.toISOString())
 
-    return redirect('/')
+    if (role == 1) {
+        return redirect('/blogger')
+    } else {
+
+        return redirect('/reader')
+    }
+
 
 }

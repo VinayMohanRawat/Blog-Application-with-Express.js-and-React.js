@@ -10,12 +10,12 @@ import './MainNavigation.css';
 
 
 export const MainNavigation = () => {
-    const {token} = useRouteLoaderData('root')
+    const { token, role } = useRouteLoaderData('root')
 
     return (
         <Navbar expand="lg" className="bg-body-tertiary">
             <Container>
-                <Link to='/'>
+                <Link to={!token ? '/' : (role == 1 ? '/blogger' : '/reader')}>
                     <Navbar.Brand>
                         Blog-App
                     </Navbar.Brand>
@@ -23,7 +23,10 @@ export const MainNavigation = () => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
-                        <Button variant="outline-light" ><Link to='/'>Home</Link>  </Button>
+                        <Button variant="outline-light" ><Link to={!token ? '/' : (role == 1 ? '/blogger' : '/reader')}>
+                            Home
+                        </Link>
+                        </Button>
                         {!token &&
                             <>
                                 <Button variant="outline-light" ><Link to="signup" >Sign up</Link>  </Button>
@@ -41,7 +44,7 @@ export const MainNavigation = () => {
                     </Nav>
                 </Navbar.Collapse>
             </Container>
-        </Navbar>
+        </Navbar >
 
 
     )

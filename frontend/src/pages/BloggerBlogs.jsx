@@ -34,6 +34,7 @@ export async function loader() {
     );
   } else {
     const resData = await response.json()
+    console.log('BloggerBlogs =>', resData.data)
     return resData.data
   }
 

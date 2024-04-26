@@ -1,6 +1,7 @@
 import React from 'react'
 import './Signup.css'
 
+
 import { Form, useNavigation } from 'react-router-dom';
 
 export const Signup = () => {

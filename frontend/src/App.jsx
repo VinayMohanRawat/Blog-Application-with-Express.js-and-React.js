@@ -18,6 +18,7 @@ import { AllBlogs, loader as readerLoader } from './components/Reader/AllBlogs'
 import { ReaderRootLayout } from './pages/ReaderRoot';
 import { BlogDetailsPage, loader as blogDetails, action as commentAction } from './pages/BlogDetails';
 import { UploadImagePage } from './pages/UploadImage';
+import { SuccessPage } from './pages/Success';
 
 const router = createBrowserRouter([
   {
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
       {
         path: 'logout',
         action: logoutAction
+      },
+      {
+        path: 'success',
+        element: <SuccessPage />
       },
       {
         path: 'blogger',
