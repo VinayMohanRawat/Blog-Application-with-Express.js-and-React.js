@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, useRouteLoaderData, Form } from 'react-router-dom';
+import { Link, useRouteLoaderData, Form, useLocation } from 'react-router-dom';
 
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -11,22 +11,33 @@ import './MainNavigation.css';
 
 export const MainNavigation = () => {
     const { token, role } = useRouteLoaderData('root')
+    const location = useLocation();
+    const { pathname } = location
 
     return (
         <Navbar expand="lg" className="bg-body-tertiary">
             <Container>
-                <Link to={!token ? '/' : (role == 1 ? '/blogger' : '/reader')}>
-                    <Navbar.Brand>
-                        Blog-App
-                    </Navbar.Brand>
-                </Link>
+                {(pathname == '/blogger' || pathname == '/reader') ?
+                    <Navbar.Brand >  Blog-App </Navbar.Brand> :
+                    <Link to={!token ? '/' : (role == 1 ? '/blogger' : '/reader')} >
+                        <Navbar.Brand >  Blog-App </Navbar.Brand>
+                    </Link>
+                }
+
+
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
-                        <Button variant="outline-light" ><Link to={!token ? '/' : (role == 1 ? '/blogger' : '/reader')}>
-                            Home
-                        </Link>
-                        </Button>
+                        {
+                            (pathname == '/blogger' || pathname == '/reader') ?
+                                '' :
+                                <Button variant="outline-light" >
+                                    <Link to={!token ? '/' : (role == 1 ? '/blogger' : '/reader')}>
+                                        Home
+                                    </Link>
+                                </Button>
+                        }
+
                         {!token &&
                             <>
                                 <Button variant="outline-light" ><Link to="signup" >Sign up</Link>  </Button>
@@ -35,7 +46,7 @@ export const MainNavigation = () => {
                         }
                         {token &&
                             <>
-                                <Form action='/logout' method='POST'>
+                                <Form action='/logout' method='POST' >
                                     <button className='logout_button'>Logout</button>
                                 </Form>
                             </>

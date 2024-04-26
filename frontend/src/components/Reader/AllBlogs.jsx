@@ -48,7 +48,6 @@ export async function loader() {
         );
     } else {
         const resData = await response.json()
-        console.log(resData)
         return resData.data
     }
 

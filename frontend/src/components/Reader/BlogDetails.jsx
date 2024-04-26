@@ -4,7 +4,7 @@ import { Form } from 'react-router-dom'
 import { Comment } from './Comment'
 
 export const BlogDetails = ({ blog }) => {
-    console.log('blog=>', blog)
+
     const comments = blog.comment;
 
     return (
