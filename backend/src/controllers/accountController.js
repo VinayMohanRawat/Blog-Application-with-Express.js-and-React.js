@@ -12,17 +12,17 @@ const createAccount = async (req, res) => {
         const validation = await validate(parameters, 'createAccount');
         let { name, email, password, confirmPassword, account_type } = validation;
 
-        isEmailExists = await prisma.account.count({
-            where: {
-                email: email,
-                account_type: account_type,
-                isDeleted: 0
-            }
-        });
+        // isEmailExists = await prisma.account.count({
+        //     where: {
+        //         email: email,
+        //         account_type: account_type,
+        //         isDeleted: 0
+        //     }
+        // });
 
-        if (isEmailExists > 0) {
-            return res.status(400).send({ status: false, message: 'Email is already exists' })
-        }
+        // if (isEmailExists > 0) {
+        //     return res.status(400).send({ status: false, message: 'Email is already exists' })
+        // } 
 
         // checking password password is matchng or not
         if (password != confirmPassword) {
