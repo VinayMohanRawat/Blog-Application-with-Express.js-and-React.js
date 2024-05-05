@@ -34,7 +34,7 @@ export const AllBlogs = () => {
 export async function loader() {
     const token = getAuthToken();
 
-    const response = await fetch('http://localhost:3000/allblogs', {
+    const response = await fetch('https://blog-application-backend-7wcn.onrender.com/allblogs', {
         method: 'GET',
         headers: {
             'Authorization': 'Bearer ' + token

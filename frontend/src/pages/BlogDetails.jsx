@@ -19,7 +19,7 @@ export async function loader({ request, params }) {
 
   let token = getAuthToken();
 
-  const response = await fetch('http://localhost:3000/blogdetails/' + blogId, {
+  const response = await fetch('https://blog-application-backend-7wcn.onrender.com/blogdetails/' + blogId, {
     method: 'GET',
     headers: {
       'Authorization': 'Bearer ' + token
@@ -54,7 +54,7 @@ export async function action({ request, params }) {
     blogId: blogId,
   }
 
-  const response = await fetch('http://localhost:3000/createcomment', {
+  const response = await fetch('https://blog-application-backend-7wcn.onrender.com/createcomment', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

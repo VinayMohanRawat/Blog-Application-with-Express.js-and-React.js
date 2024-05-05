@@ -8,7 +8,7 @@ export async function action() {
     localStorage.removeItem('role');
     localStorage.removeItem('expiration')
 
-    await fetch('http://localhost:3000/logout', {
+    await fetch('https://blog-application-backend-7wcn.onrender.com/logout', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

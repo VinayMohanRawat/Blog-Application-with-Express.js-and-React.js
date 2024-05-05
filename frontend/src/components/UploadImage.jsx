@@ -26,7 +26,7 @@ export const UploadImage = () => {
 
 
     try {
-      const response = await axios.post('http://localhost:3000/uploadimage', formData, {
+      const response = await axios.post('https://blog-application-backend-7wcn.onrender.com/uploadimage', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           'Authorization': 'Bearer ' + token

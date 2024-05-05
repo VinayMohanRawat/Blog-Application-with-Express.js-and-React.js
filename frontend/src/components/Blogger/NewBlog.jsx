@@ -43,11 +43,11 @@ export async function action({ request, params }) {
 
     let body = Object.fromEntries(await request.formData())
 
-    let url = 'http://localhost:3000/createblog'
+    let url = 'https://blog-application-backend-7wcn.onrender.com/createblog'
 
     if (method === 'PUT') {
         body.blogId = blogId
-        url = 'http://localhost:3000/editblog'
+        url = 'https://blog-application-backend-7wcn.onrender.com/editblog'
     }
 
     const response = await fetch(url, {

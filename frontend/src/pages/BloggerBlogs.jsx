@@ -18,7 +18,7 @@ export const BloggerBlogsPage = () => {
 export async function loader() {
   const token = getAuthToken();
 
-  const response = await fetch('http://localhost:3000/bloglist', {
+  const response = await fetch('https://blog-application-backend-7wcn.onrender.com/bloglist', {
     method: 'GET',
     headers: {
       'Authorization': 'Bearer ' + token

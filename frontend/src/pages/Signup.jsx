@@ -26,7 +26,7 @@ export async function action({ request }) {
         account_type: account_type
     }
 
-    const response = await fetch('http://localhost:3000/createaccount', {
+    const response = await fetch('https://blog-application-backend-7wcn.onrender.com/createaccount', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

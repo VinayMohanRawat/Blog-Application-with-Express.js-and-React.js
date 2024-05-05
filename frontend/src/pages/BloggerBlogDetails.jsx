@@ -21,7 +21,7 @@ export async function loader({ request, params }) {
     const { blogId } = params;
     let token = getAuthToken();
 
-    const response = await fetch('http://localhost:3000/blogdetails/' + blogId, {
+    const response = await fetch('https://blog-application-backend-7wcn.onrender.com/blogdetails/' + blogId, {
         method: 'GET',
         headers: {
             'Authorization': 'Bearer ' + token
@@ -48,7 +48,7 @@ export async function action({ request, params }) {
 
     const token = getAuthToken();
 
-    const response = await fetch('http://localhost:3000/deleteblog/' + blogId, {
+    const response = await fetch('https://blog-application-backend-7wcn.onrender.com/deleteblog/' + blogId, {
         method: request.method,
         headers: {
             'Content-Type': 'application/json',
