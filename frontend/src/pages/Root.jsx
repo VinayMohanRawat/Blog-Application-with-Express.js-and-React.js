@@ -8,9 +8,8 @@ export const RootLayout = () => {
     return (
         <>
             <MainNavigation />
-            <main>
-                <Outlet />
-            </main>
+            <Outlet />
+
         </>
     )
 }
